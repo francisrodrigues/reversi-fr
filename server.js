@@ -52,6 +52,7 @@ io.sockets.on('connection', function (socket){
 	socket.on('disconnect', function(socket){
 		log('A website disconnected from the server');
 	});
+
 	/* join_room command */
 	/* payload:
 	{
@@ -157,8 +158,8 @@ io.sockets.on('connection', function (socket){
 												message: error_message
 												});
 			return;
-		}
 
+		}
 		var room = payload.room;
 		if(('undefined' === typeof room) || !room){
 			var error_message = 'send_message didn\'t specify a room, command aborted';
@@ -198,7 +199,6 @@ io.sockets.on('connection', function (socket){
 							message: message
 						};
 		io.sockets.in(room).emit('send_message_response',success_data);
-		log('Message sent to room '+ room + 'by ' +username);
-
+		log('Message sent to room '+ room + ' by ' +username);
 	});
 });
