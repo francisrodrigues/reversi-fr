@@ -27,7 +27,7 @@ socket.on('log',function(array){
 
 socket.on('join_room_response',function(payload){
 	if(payload.result == 'fail'){
-		alert(payload.Message);
+		alert(payload.message);
 		return;
 	}
 	$('#messages').append('<p>New user joined the room: '+payload.username+'</p>');
@@ -40,7 +40,6 @@ socket.on('send_message_response',function(payload){
 	}
 	$('#messages').append('<p><em>'+payload.username+' says:</em> '+payload.message+'</p>'); 																			
 });
-
 
 function send_message(){
 	var payload = {};
