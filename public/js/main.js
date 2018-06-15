@@ -366,16 +366,16 @@ socket.on('game_update',function(payload){
           $('#' + row + '_' + column).html('<img src="images/empty.gif" alt="empty square"/>');
         }
         else if (old_board[row][column] == '?' && board[row][column] == 'w') {
-          $('#' + row + '_' + column).html('<img src="images/empty_to_white.gif" alt="white square"/>');
+          $('#' + row + '_' + column).html('<img src="images/white-token-ps.gif" alt="white square"/>');
         }
         else if (old_board[row][column] == '?' && board[row][column] == 'b') {
-          $('#' + row + '_' + column).html('<img src="images/empty_to_black.gif" alt="black square"/>');
+          $('#' + row + '_' + column).html('<img src="images/black-token-ps.gif" alt="black square"/>');
         }
         else if (old_board[row][column] == ' ' && board[row][column] == 'w') {
-          $('#' + row + '_' + column).html('<img src="images/empty_to_white.gif" alt="white square"/>');
+          $('#' + row + '_' + column).html('<img src="images/white-token-ps.gif" alt="white square"/>');
         }
         else if (old_board[row][column] == ' ' && board[row][column] == 'b') {
-          $('#' + row + '_' + column).html('<img src="images/empty_to_black.gif" alt="black square"/>');
+          $('#' + row + '_' + column).html('<img src="images/black-token-ps.gif" alt="black square"/>');
         }
         else if (old_board[row][column] == 'w' && board[row][column] == ' ') {
           $('#' + row + '_' + column).html('<img src="images/white_to_empty.gif" alt="empty square"/>');
@@ -384,10 +384,10 @@ socket.on('game_update',function(payload){
           $('#' + row + '_' + column).html('<img src="images/black_to_empty.gif" alt="empty square"/>');
         }
         else if (old_board[row][column] == 'w' && board[row][column] == 'b') {
-          $('#' + row + '_' + column).html('<img src="images/white_to_black_new.gif" alt="black square"/>');
+          $('#' + row + '_' + column).html('<img src="images/white_to_black_new-ps.gif" alt="black square"/>');
         }
         else if (old_board[row][column] == 'b' && board[row][column] == 'w') {
-          $('#' + row + '_' + column).html('<img src="images/black_to_white_new.gif" alt="white square"/>');
+          $('#' + row + '_' + column).html('<img src="images/black_to_white_new-ps.gif" alt="white square"/>');
         }
         else {
           $('#' + row + '_' + column).html('<img src="images/error.gif" alt="error square"/>');
